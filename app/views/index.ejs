@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+
+<% if(locals.title == "about") {%>
+    <%- include("partials/about"); %>
+<% } %>
+
+<% if(locals.title == "list" || locals.title == "list-fruits" || locals.title == "list-legumes") {%>
+    <%- include("partials/list"); %>
+<% } %>
+
+<% if(locals.title == "product") {%>
+    <%- include("partials/product"); %>
+<% } %>
+
+    <aside class="segment">
+        <h2 class="segment-title">Votre Maraîcher partout en France</h2>
+        <p class="segment-desc">Retrouvez nos boutiques aux quatre coins de l'hexagone.</p>
+        <ul class="segment-list">
+        <li>Paris</li>
+        <li>Lyon</li>
+        <li>Marseille</li>
+        <li>Brest</li>
+        <li>Lille</li>
+        <li>Strasbourg</li>
+        <li>Montpellier</li>
+        <li>Bar-le-Duc</li>
+        </ul>
+    </aside>
+    </div>
+
+<%- include("partials/aside"); %>
+
+<%- include('partials/footer') %>

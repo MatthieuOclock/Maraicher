@@ -1,6 +1,6 @@
 import express from 'express';
 import * as dotenv from 'dotenv';
-import router from './app/router.js';
+import rooter from './app/rooter.js';
 
 dotenv.config();
 
@@ -13,7 +13,7 @@ app.set('views', './app/views/');
 
 app.use(express.static('./public'));
 
-app.use(router);
+app.use(rooter);
 
 app.listen(port, () => {
     console.log(`app sur http://localhost:${port}/`);

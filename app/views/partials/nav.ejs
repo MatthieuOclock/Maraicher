@@ -1,0 +1,43 @@
+<% switch(locals.title){ 
+    case "about" : %>
+        <nav class="menu">
+            <a class="menu-item menu-item--active" href="./list">Accueil</a>
+            <a class="menu-item" href="./list-fruits">Fruits</a>
+            <a class="menu-item" href="./list-legumes">Légumes</a>
+            <a class="menu-btn btn" href="./about">A propos</a>
+        </nav>
+    <% break; 
+    case "list" : %> 
+    <nav class="menu">
+        <a class="menu-item menu-item--active" href="./list">Accueil</a>
+        <a class="menu-item" href="./list-fruits">Fruits</a>
+        <a class="menu-item" href="./list-legumes">Légumes</a>
+        <a class="menu-btn btn" href="./about">A propos</a>
+      </nav>
+    <% break; 
+    case "list-fruits" : %> 
+    <nav class="menu">
+        <a class="menu-item" href="./list">Accueil</a>
+        <a class="menu-item menu-item--active" href="./list-fruits">Fruits</a>
+        <a class="menu-item" href="./list-legumes">Légumes</a>
+        <a class="menu-btn btn" href="./about">A propos</a>
+      </nav>
+    <% break; 
+    case "list-legumes" : %> 
+    <nav class="menu">
+        <a class="menu-item" href="./list">Accueil</a>
+        <a class="menu-item" href="./list-fruits">Fruits</a>
+        <a class="menu-item menu-item--active" href="./list-legumes">Légumes</a>
+        <a class="menu-btn btn" href="./about">A propos</a>
+      </nav>
+    <% break; 
+    case "product" : %> 
+        <nav class="menu">
+            <a class="menu-item" href="./list">Accueil</a>
+            <a class="menu-item menu-item--active" href="../list-fruits">Fruits</a>
+            <a class="menu-item" href="../list-legumes">Légumes</a>
+            <a class="menu-btn btn" href="../about">A propos</a>
+        </nav>
+    <% break; 
+ };  %>
+

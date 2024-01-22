@@ -1,0 +1,25 @@
+<h1 class="page-title">Abricots</h1>
+    <div class="page-main">
+      <section class="segment">
+        <article class="detail">
+          <img class="detail-img" src="../img/products/<%= locals.DataUrl.slug %>.jpg" alt="">
+          <div class="detail-content">
+            <h2><%= locals.DataUrl.title %> : détails</h2>
+            <h3>Catégories</h3>
+            <p><a class="btn" href=""><%= locals.DataUrl.category.charAt(0).toUpperCase() + locals.DataUrl.category.slice(1) %></a></p>
+            <h3>Description</h3>
+            <p><%= locals.DataUrl.description %></p>
+            <h3>Note</h3>
+            <p><span class="detail-grade" aria-hidden="true">
+              <% for(let i = 0; i < locals.DataUrl.grade; i++) { %>
+                &#9733;
+              <% } %>
+
+              <% for(let i = 0; i < 5 - locals.DataUrl.grade; i++) { %>
+                &#9734;
+              <% } %></span><%= locals.DataUrl.grade %>/5</p>
+            <footer class="detail-action">
+              <p>Retour <a class="btn" href="../list">Accueil</a> ou rayon <a class="btn" href="../list-<%= locals.DataUrl.category %>"><%= locals.DataUrl.category.charAt(0).toUpperCase() + locals.DataUrl.category.slice(1) %></a></p>
+            </footer>
+          </div>
+        </article>

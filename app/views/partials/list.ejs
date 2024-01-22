@@ -1,0 +1,34 @@
+<h1 class="page-title">Au Chouette Maraîcher</h1>
+    <div class="page-main">
+      <section class="segment">
+        <div class="segment-title segment-title--action">
+          <h2>Tous les produits</h2>
+          <label class="small-hidden">
+            Produits par ligne 
+            <select>
+              <option value="2">2</option>
+              <option selected value="4">4</option>
+            </select>
+          </label>
+        </div>
+        <div class="segment-cards segment-cards--4">
+        <% for(const item of locals.product) { %>
+          <article class="card">
+            <img class="card-img" src="./img/products/<%= item.toLowerCase().replace(' ','-').normalize('NFD').replace(/[\u0300-\u036f]/g, '') %>.jpg" alt="">
+            <h3 class="card-title"><%= item %></h3>
+            <a class="card-action btn" href="./product/<%= item.toLowerCase().replace(' ','-').normalize('NFD').replace(/[\u0300-\u036f]/g, '') %>" aria-label="Voir le détail du produit Abricots">Voir le détail</a>
+          </article>
+        <% } %>
+        </div>
+      </section>
+
+      <script>
+        const segment_cards = document.querySelector(".segment-cards"); 
+        const select = document.querySelector("select"); 
+
+
+        select.addEventListener("change",()=>{ 
+          segment_cards.classList.toggle("segment-cards--4"); 
+        })
+
+      </script>
